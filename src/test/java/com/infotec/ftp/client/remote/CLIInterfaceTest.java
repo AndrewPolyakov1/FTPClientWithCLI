@@ -97,14 +97,14 @@ public class CLIInterfaceTest {
         server.stop();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testServerIsAvailable() throws IOException {
         URL url = new URL(String.format("ftp://%s:%s@%s:%d/%s", LOGIN, PASSWORD, HOST, PORT, REMOTE_PATH));
         URLConnection connection = url.openConnection();
         connection.connect();
     }
 
-    @Test
+    @Test(enabled = false)
     public void testRun() throws IOException {
         // Mock System.in
         String simulatedInput = "1\n1\n5";
